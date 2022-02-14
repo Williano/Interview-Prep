@@ -1,0 +1,4 @@
+        # Hash map to track the value you get when you subtract that element
+        # from the target and each element's index in the list.
+        # The key is the value you get when you subtract each element from target
+        # The value is the index of the element you subtracted from the target
