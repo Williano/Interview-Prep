@@ -1,11 +1,11 @@
 import unittest
 
-import two_sum
+from two_sum_leetcode_1.two_sum import TwoSum
 
 
 class TestTwoSum(unittest.TestCase):
     def setUp(self) -> None:
-        self.test_two_sum = two_sum.TwoSum()
+        self.test_two_sum = TwoSum()
 
     def test_cases(self):
         self.assertEqual(
@@ -19,3 +19,7 @@ class TestTwoSum(unittest.TestCase):
         self.assertEqual(self.test_two_sum.two_sum(nums=[3, 2, 4], target=15), [])
 
         self.assertEqual(self.test_two_sum.two_sum(nums=[], target=15), [])
+
+
+# How to run test
+# python -m unittest  two_sum_leetcode_1/test_two_sum.py

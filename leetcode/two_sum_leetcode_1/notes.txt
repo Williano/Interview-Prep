@@ -1,4 +1,4 @@
-Explanation:
+Solution Explanation:
 For each element in the list, what we are looking for is the difference
 between the target and the element. The moment you find the difference
 for a particular element in the hash map, you have found the solution.
@@ -14,7 +14,7 @@ if the difference is in the hash map, return the index of that difference and
 the index of the current element you are on
 
 if the difference is not in the hash map, store the current element
-as key and its index as value in the hash map
+as key and its index as value in the hash map meaning you have already checked it
 
 Big O Analysis:
 Time complexity: O(N) -> You have to check each element once
