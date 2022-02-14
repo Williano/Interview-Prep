@@ -29,6 +29,19 @@ from typing import List
 
 class TwoSum:
     def two_sum(self, nums: List[int], target: int) -> List[int]:
+        """
+        While we are iterating and inserting elements into the hash table,
+        we also look back to check if current element's difference already
+        exists in the hash table. If it exists, we have found a solution and
+        return the indices immediately.
+
+        Time complexity: O(n). We traverse the list containing nn elements
+        only once. Each lookup in the table costs only O(1)O(1) time.
+
+        Space complexity: O(n). The extra space required depends on the
+        number of items stored in the hash table,
+        which stores at most n elements.
+        """
 
         diff_from_target_and_index = {}  # diff: index
 
@@ -36,9 +49,30 @@ class TwoSum:
             diff_from_target = target - element
 
             if diff_from_target in diff_from_target_and_index:
-                return [element_index, diff_from_target_and_index[diff_from_target]]
+                return [diff_from_target_and_index[diff_from_target], element_index]
 
             diff_from_target_and_index[element] = element_index
+
+        return []
+
+    def two_sum_brute_force(self, nums: List[int], target: int) -> List[int]:
+        """
+        The brute force approach is simple. Loop through each element x and
+        find if there is another value that equals to target - x.
+
+        Time complexity: O(n^2). For each element, we try to find its
+        complement by looping through the rest of the array which takes O(n)
+        time. Therefore, the time complexity is O(n^2).
+
+        Space complexity: O(1). The space required does not depend on the
+        size of the input array, so only constant space is used.
+
+        """
+
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                if nums[j] == target - nums[i]:
+                    return [i, j]
 
         return []
 

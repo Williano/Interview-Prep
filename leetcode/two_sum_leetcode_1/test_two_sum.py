@@ -9,12 +9,14 @@ class TestTwoSum(unittest.TestCase):
 
     def test_cases(self):
         self.assertEqual(
-            self.test_two_sum.two_sum(nums=[2, 7, 11, 15], target=9), [1, 0]
+            self.test_two_sum.two_sum_brute_force(nums=[2, 7, 11, 15], target=9), [0, 1]
         )
 
-        self.assertEqual(self.test_two_sum.two_sum(nums=[3, 2, 4], target=6), [2, 1])
+        self.assertEqual(
+            self.test_two_sum.two_sum_brute_force(nums=[3, 2, 4], target=6), [1, 2]
+        )
 
-        self.assertEqual(self.test_two_sum.two_sum(nums=[3, 3], target=6), [1, 0])
+        self.assertEqual(self.test_two_sum.two_sum(nums=[3, 3], target=6), [0, 1])
 
         self.assertEqual(self.test_two_sum.two_sum(nums=[3, 2, 4], target=15), [])
 
