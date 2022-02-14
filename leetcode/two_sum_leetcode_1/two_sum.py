@@ -40,6 +40,8 @@ class TwoSum:
 
             diff_from_target_and_index[element] = element_index
 
+        return []
+
 
 def main():
 

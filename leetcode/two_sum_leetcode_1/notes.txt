@@ -1,4 +1,21 @@
-        # Hash map to track the value you get when you subtract that element
-        # from the target and each element's index in the list.
-        # The key is the value you get when you subtract each element from target
-        # The value is the index of the element you subtracted from the target
+Explanation:
+For each element in the list, what we are looking for is the difference
+between the target and the element. The moment you find the difference
+for a particular element in the hash map, you have found the solution.
+You can then return the index of the current element and the index of the
+difference in the hash map
+
+Algorithm:
+Use a Hash map to store the values and their index in the list
+Before you store every value in the hash map, subtract the value from the target
+
+Check if the difference from subtracting is the hash map
+if the difference is in the hash map, return the index of that difference and
+the index of the current element you are on
+
+if the difference is not in the hash map, store the current element
+as key and its index as value in the hash map
+
+Big O Analysis:
+Time complexity: O(N) -> You have to check each element once
+Space complexity: O(N) -> You need an extra space to store the list which is hash map
