@@ -1,0 +1,36 @@
+######### Solution 1 ##########
+Brute Force:
+Go through the list, for each element compare with other elements
+in the list, if  any of the numbers matches the current number, it
+means there is a duplicate so return True
+If no element matches itself in the list, return False
+
+Algorithm:
+Create a loop to go through each number
+For each number, create another loop starting from the element that
+comes after itslef.
+Compare the current element with the rest of the elements
+If the numbers match, return True otherwise return False
+
+Big O Analysis:
+Time complexity: O(N^2) -> For each element, we try to find its
+        complement by looping through the rest of the array which takes O(n)
+        time. Therefore, the time complexity is O(n^2).
+Space complexity: O(1) -> You do not extra space
+
+
+######### Solution 2 ##########
+Hash Map:
+You create a hash map and go through the elements, for each element check
+if the element exist in the hash map, if it is exist in the hash map, return
+True else add the element to the hash map and set it value to 1
+If you go through the loop and don't find any matches for all numbers in the
+hash map, return False
+
+
+Big O Analysis:
+Time complexity: O(n). We traverse the list containing n elements only once.
+Each lookup in the table costs only O(1) time.
+
+Space complexity: O(n). The extra space required depends on the number of items
+ stored in the hash table, which stores at most n elements.
