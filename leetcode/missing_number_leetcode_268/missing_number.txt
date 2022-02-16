@@ -1,0 +1,16 @@
+Solution Explanation:
+You will first have to find the range of the N value which is the length
+of the list given including itself.
+Afterwards, you will get every number in the range of N and check if it is
+the list you have been given or not.
+If it is not in the list you've been given, return the first number you
+encounter which is not in the list
+
+Algorithm:
+Use a for loop to go through the range of the length of the list plus 1
+Check if the current index is not in the given array
+If the current index is not in the given array, return the index as the number missing
+
+Big O Analysis:
+Time complexity: O(N) -> You have to check each element once in the range of N(length of list)
+Space complexity: O(1) -> You won't need any extra space
