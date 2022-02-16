@@ -56,6 +56,7 @@ class Solution:
             counter += 1
             current_node = current_node.next
 
+        # Calculate the index of the middle number
         middle_number_index = counter // 2
 
         # Check if the middle number is equal to the first element
@@ -75,9 +76,6 @@ class Solution:
             counter += 1
 
         return head
-
-
-
 
         # if head is None:
         #     return head
@@ -110,6 +108,4 @@ class Solution:
         #     cur_node = cur_node.next
         #     count += 1
 
-
         # return head
-
