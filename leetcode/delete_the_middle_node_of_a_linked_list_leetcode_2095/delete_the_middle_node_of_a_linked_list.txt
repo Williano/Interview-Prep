@@ -1,0 +1,24 @@
+Solution Explanation:
+You check if the list empty, if it is, you will return the head
+The find the middle number, you'll have to know the length of the linked list
+first.
+Once you use the length to get the middle number, you'll have to check if the
+middle number is equal to the current head which is at index 0. If it is, you wil
+get the head's next and set it as the current head of the list and return the head
+The step is to go through the whole list and for each element using a counter,
+you will check if the current element's index which is the current value in the
+ counter is equal to the index of the previous of the middle element.
+If it is, you point the current element's next to the next of the middle number.
+
+Algorithm:
+Check if the head is None, if it is return the head.
+Otherwise you will use a counter to get the length of the list as you go through it.
+Once you get the length, you use it to calculate the index of the middle number
+You go through the list with another counter and for each element you check to see
+if the current element index is equal to the index of the previous element of the middle
+number. If it is, you will point the current element's next to the current element's next next
+and return the head
+
+Big O Analysis:
+Time complexity: O(N^2) -> You have to check each element once
+Space complexity: O(1) -> You won't need any extra space
