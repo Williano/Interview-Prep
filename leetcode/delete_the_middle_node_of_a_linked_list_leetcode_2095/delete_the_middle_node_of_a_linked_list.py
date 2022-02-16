@@ -1,6 +1,6 @@
 """
     Leetcode No: 2095
-    Title: Two Sum
+    Title: Delete The Middle Node of A Linked List
     Description:
     You are given the head of a linked list. Delete the middle node,
     and return the head of the modified linked list.
@@ -38,8 +38,6 @@
     For n = 2, node 1 with value 1 is the middle node, which is marked in red.
     Node 0 with value 2 is the only node remaining after removing node 1.
 """
-
-from typing import List
 
 
 class Solution:
