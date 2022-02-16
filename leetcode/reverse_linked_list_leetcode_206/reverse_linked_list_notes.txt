@@ -1,0 +1,27 @@
+Solution Explanation:
+While you are traversing the list, change the current node's next pointer to
+point to its previous element. Since a node does not have reference to its
+previous node, you must store its previous element beforehand. You also need
+another pointer to store the next node before changing the reference.
+Do not forget to return the new head reference at the end!
+
+
+Algorithm:
+Intialize two pointers, one for previous element and once for current element and
+set the previous to Null because at the start the head will have no previous.
+Set the pointer for the current node to the head of the linked list
+Go through the list as long as the there is data, while going through
+    Store the current node's next value in a temporary variable because you will
+    change the current node's next to look back
+    After doing that, point the current node's next to the previous counter
+    Then before you move to the next element in the list, move the previous pointer
+    to point to the current element before moving
+    Afterwards set the current pointer to point the current element's next which was
+    stored in a temporary variable before changing its next value
+Once there is no element in the list, return the new head which is stored in the
+previous counter
+
+
+Big O Analysis:
+Time complexity: O(N) -> You have to check each element once
+Space complexity: O(1) -> No space is used
