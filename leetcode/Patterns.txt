@@ -1,0 +1,6 @@
+1. For linked list questions, you can create a dummy node as your head.
+Sentinel nodes are widely used in trees and linked lists as pseudo-heads,
+pseudo-tails, markers of level end, etc. They are purely functional,
+and usually does not hold any data. Their main purpose is to standardize
+the situation, for example, make linked list to be never empty and never
+headless and hence simplify insert and delete.

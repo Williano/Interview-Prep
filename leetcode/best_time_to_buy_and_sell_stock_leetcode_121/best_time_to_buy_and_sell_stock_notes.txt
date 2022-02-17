@@ -1,0 +1,33 @@
+Solution Explanation:
+You use two pointers, one points to buy and the other points to sell
+Once you start, the buy will be the first element in the list and the sell
+will be the second element
+You have another variable to store the profit of when you sell a stock
+You will go through the list as long as the the sell index is not bigger than
+the length of the list.
+For each walkthrough, you check to see if the current
+buy is less than the sell, it is subtract the buy from the sell and compare with
+the current profit and chose the maximum one as the new profit. If the sell is
+less than the current buy, then the sell will become your new buy and you move
+the sell to the next price in the list
+You will do this until you reach the end of the list
+
+Algorithm:
+Intialize a variable for buy and sell and set buy to the first index element in the
+list and sell to the second index element in the list. Also Intialize a max profit
+variable to be 0 to track our profit
+While the sell's index is less than the length of the list
+    check if the current buy is less than the current sell
+        if it is true, then subtract the current buy from the current sell and
+        compare it with the current profit and chose the maximum one as your
+        new profit
+        else if it is not, meaning the current sell is lower than the current
+        buy, so you point the current buy to the current sell
+    move the current sell to the next price in the list and repeat the process
+    until the index of current sell is bigger than the length of the list
+    meaning we are at the end of the list
+return the current value of the max profit variable
+
+Big O Analysis:
+Time complexity: O(N) -> You have to check each element once
+Space complexity: O(1) -> No space is used
