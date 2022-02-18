@@ -1,0 +1,38 @@
+Solution Explanation:
+You will create a dummy node to act as the head of the merge list
+You will then create a Tail as current pointer to point to the dummy node or head
+You will go through the list as long as there is data in one of the list. For
+each pass, you will check if the value in list1 is less than the current value
+in list2. If it is, you will get the Tail node's next and point it to the list1
+value and point the current list1 to it's next value.
+If it is not, you will get the Tail node's next and point it to the list2
+value and point the current list2 to it's next value.
+Outside the if-else condition, you will point the Tail to it's next value
+Once the while loop breaks, check if list1 still has values in it, if it does,
+get the Tail's next and append the list2. Check if list2 still has values in it,
+if it does, get the Tail's next and append the list2
+Finally return the dummy node's next you created earlier which will point to
+the new merged list's head because the current node variable will be pointing
+to the end of the list by then so you can't return that.
+
+Algorithm:
+You will create a dummy node to act the head of the merge list
+You will then create a Tail to point to the dummy node
+You will go through the list as long as there is data in one of the list. For
+each pass, you will check if the value in list1 is less than the current value
+in list2. If it is, you will get the Tail node's next and point it to the list1
+value and point the current list1 to it's next value.
+If it is not, you will get the Tail node's next and point it to the list2
+value and point the current list2 to it's next value.
+Outside the if-else condition, you will point the Tail to it's next value
+Once the while loop breaks, check if list1 still has values in it, if it does,
+get the Tail's next and append the list2. Check if list2 still has values in it,
+if it does, get the Tail's next and append the list2
+Finally return the dummy node's next you created earlier which will point to
+the new merged list's head because the current node variable will be pointing
+to the end of the list by then so you can't return that.
+
+
+Big O Analysis:
+Time complexity: O(N) -> You have to check each element once
+Space complexity: O(1) -> No space is used
