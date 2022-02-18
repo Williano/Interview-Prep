@@ -1,0 +1,18 @@
+Solution Explanation:
+
+
+Algoirhtm:
+- Create an empty list you will return after the inorder traversal
+- Check to see if the root node is None, if it is None, return the root node.
+This is the base case for our recusion
+- Check to see if root node has a left child, if true, recursive call the function
+on its left and add the results to empty list
+- Once the left side is done traversing, add the root node to the list
+- Check to see if root node has a right child, if true, recursive call the function
+on its right and add the results to the list
+- Return the new list
+
+
+Big O Analysis:
+Time complexity: O(N) -> You have to check each element once
+Space complexity: O(N) -> You need an extra space to store the list
