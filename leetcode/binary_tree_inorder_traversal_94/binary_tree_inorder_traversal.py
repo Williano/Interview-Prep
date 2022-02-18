@@ -39,11 +39,14 @@ class Solution:
         if root is None:
             return root
 
+        # Traverse left sub-tree
         if root.left:
             in_order_traversal += self.inorder_traversal(root.left)
 
+        # Add root node
         in_order_traversal.append(root.val)
 
+        # Traverse right sub-tree
         if root.right:
             in_order_traversal += self.inorder_traversal(root.right)
 
