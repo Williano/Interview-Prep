@@ -1,0 +1,14 @@
+Solution Explanation:
+You are looking for a number which appears only once in the list.
+
+Algorithm:
+- Return the list if the length of the list is less than 2
+- Create an empty list to store the new values that appear only once
+- Go through the list and for each element check number of times it appears in the
+list.
+-If the number of times it appears is less than 2, add it to the new list
+-If you get out of the loop, return the new list
+
+Big O Analysis:
+Time complexity: O(N) -> You have to check each element once
+Space complexity: O(N) -> You need an extra space to store the list
