@@ -41,10 +41,7 @@
 
 
 class Solution:
-    def delete_middle(self, head):
-
-        if head is None:
-            return head
+    def get_length_of_list(self, head) -> int:
 
         # Get the length of the list
         counter = 0
@@ -54,8 +51,15 @@ class Solution:
             counter += 1
             current_node = current_node.next
 
+        return counter
+
+    def delete_middle(self, head):
+
+        if head is None:
+            return head
+
         # Calculate the index of the middle number
-        middle_number_index = counter // 2
+        middle_number_index = self.get_length_of_list(head) // 2
 
         # Check if the middle number is equal to the first element
         if middle_number_index == 0:
@@ -74,36 +78,3 @@ class Solution:
             counter += 1
 
         return head
-
-        # if head is None:
-        #     return head
-
-        # # Get the length of the list
-        # counter = 0
-        # current_node = head
-
-        # while current_node:
-        #     counter += 1
-        #     current_node = current_node.next
-
-        # middle_node = counter // 2
-
-        # # If middle node is equal to first element
-        # if middle_node == 0:
-        #     head = head.next
-        #     return head
-
-        # # Remove middle element
-        # cur_node = head
-        # count = 0
-
-        # while cur_node:
-
-        #     if count == (middle_node -1):
-        #         cur_node.next = cur_node.next.next
-        #         return head
-
-        #     cur_node = cur_node.next
-        #     count += 1
-
-        # return head
