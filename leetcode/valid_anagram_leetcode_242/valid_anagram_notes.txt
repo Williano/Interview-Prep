@@ -1,0 +1,16 @@
+Solution Explanation:
+Anagrams have same characters and equal lengths.
+So all you have to do is check if the two strings have same length and characters.
+If they have same length and same characters, it is valid anagram otherwise it is
+not.
+
+Algorithm:
+- Check the length of the two strings, if the are not equal, return False because
+anagrams have equal length
+- Check if both strings have same characters, if they have same characters, it is
+an anagram
+
+
+Big O Analysis:
+Time complexity: O(NlogN) -> You have to check each element once
+Space complexity: O(N) -> You need an extra space to store the list which is hash map
