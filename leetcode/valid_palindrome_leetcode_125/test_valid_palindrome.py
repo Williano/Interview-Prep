@@ -1,6 +1,6 @@
 import unittest
 
-from valid_palindrome_125.valid_palindrome import Solution
+from valid_palindrome_leetcode_125.valid_palindrome import Solution
 
 
 class TestValidPalindrome(unittest.TestCase):
