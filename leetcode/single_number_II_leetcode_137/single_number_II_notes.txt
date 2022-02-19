@@ -1,0 +1,12 @@
+Solution Explanation:
+You are looking for a number which appears only once in the list.
+
+Algorithm:
+- Return the first element in the list if the length of the list is less than 2
+- Go through the list and for each element check number of times it appears in the
+list.
+If the number of times it appears is less than 2, return that number
+
+Big O Analysis:
+Time complexity: O(N) -> You have to check each element once
+Space complexity: O(1) -> You need an extra space to store the list
