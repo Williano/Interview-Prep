@@ -1,0 +1,22 @@
+Solution Explanation:
+You will print the tree level by level using a queue
+
+Algorithm:
+- Create a queue
+- Add the root to the queue
+- Create new list called level_order_traversal
+- While the queue is not empty, dequeue element from it
+- Create a new list to store the levels in it and call it levels
+- Use a for loop to go through the queue, as long as there is data in the queue,
+add append it to the new list
+- Afterwards, for each element in the queue, check if it has a left, if it has
+a left, enqueue the element to the end of the queue and repeat same if it has a
+right element.
+- Once you get out of the for loop, append what it is in the current levels list
+to the level_order_traversal list
+- Once there is no items in the queue, which onces the while loop breaks, return
+the level_order_traversal list
+
+Big O Analysis:
+Time complexity: O(N^2) -> You have to check each element twice
+Space complexity: O(N) -> You need an extra space to store the list
