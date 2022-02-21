@@ -20,7 +20,6 @@
     Input: root = []
     Output: []
 """
-import imp
 from typing import Optional, List
 from collections import deque
 
