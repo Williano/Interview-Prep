@@ -1,0 +1,12 @@
+Solution Explanation:
+Split the words into an array and reverse them. After reversing, join them
+together using a whitespaces
+
+Algorithm:
+- Convert the words into a list
+- Reverse the list
+- Join the reverse list together using whitespaces
+
+Big O Analysis:
+Time complexity: O(N) -> You have to check each element once
+Space complexity: O(N) -> You need an extra space to store the list
