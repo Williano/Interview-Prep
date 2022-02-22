@@ -1,0 +1,18 @@
+Solution Explanation:
+
+
+Algorithm:
+- Store the seven different roman numerals as keys in a dictionary and their
+integer as values
+- Create a variable to store the result of roman conversion and set it to 0
+- Loop through the list and for each element in the index:
+    - Check if the index of the number infront of it is less than the length of
+    the list and also if the number is less than the one if front of it.
+    - If it is less than the number in front of it, subtract the number from
+      the result
+    - Else add the number to the result
+- Return the result
+
+Big O Analysis:
+Time complexity: O(N) -> You have to check each element once
+Space complexity: O(1) -> You do not need an extra space
