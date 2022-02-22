@@ -1,0 +1,15 @@
+Solution Explanation:
+Convert the list of integers to list of strings and afterwards merge the list
+of strings into one word. Then convert the word to integer and add one to it
+Afterwards, convert the new digit to into a list
+
+Algorithm:
+- Convert the list of digit into a list of strings
+- Join the list of words together as one string, covert the string to an integer
+and add one to it
+- Convert the new word into a list of integers by converting the digits into string
+and for each character convert it into an integer and add to the list
+
+Big O Analysis:
+Time complexity: O(N^2) -> You have to check each element twice
+Space complexity: O(N) -> You need an extra space to store the list
