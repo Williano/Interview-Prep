@@ -1,0 +1,17 @@
+Solution Explanation:
+You can use the in-built python reverse() method on the string and it will do
+an in-place reverse or you can use two pointers, one at the start and the other
+at the end and swap both on each iteration
+
+Algorithm:
+- Initialize two pointers, left = 0, right = len(s) - 1
+- While the left pointer is less than or equal to the right
+    - Swap the element in the left with right element and right element with
+      left element
+    - Increase left pointer by adding one to it and decrease the left pointer by 1
+
+- Return the list
+
+Big O Analysis:
+Time complexity: O(N) -> You have to check each element once
+Space complexity: O(1) -> No extra required

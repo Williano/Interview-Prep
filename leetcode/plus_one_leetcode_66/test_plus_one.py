@@ -3,7 +3,7 @@ import unittest
 from plus_one_leetcode_66.plus_one import Solution
 
 
-class TestValidPalindrome(unittest.TestCase):
+class TestPlusOne(unittest.TestCase):
     def setUp(self) -> None:
         self.solution = Solution()
         self.data_1 = [1, 2, 3]
