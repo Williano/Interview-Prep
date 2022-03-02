@@ -41,6 +41,13 @@ class Solution:
         self, l1: Optional[ListNode], l2: Optional[ListNode]
     ) -> Optional[ListNode]:
 
+        """
+        Big 0:
+
+        Time Complexity: O(max(m, n))
+        Space Complexity: O(n)
+        """
+
         dummy = ListNode(0)
         current_node = dummy
 
