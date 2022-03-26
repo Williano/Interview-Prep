@@ -19,52 +19,52 @@
 """
 
 
-def generate_palindrome(string_in):
+class Solution:
+    def generate_palindrome(self, string_in: str):
+        # Count occurrences of each character
 
-    # Count occurrences of each character
+        char_count = {}
 
-    char_count = {}
+        for char in string_in:
 
-    for char in string_in:
+            if char in char_count:
+                char_count[char] += 1
 
-        if char in char_count:
-            char_count[char] += 1
+            else:
+                char_count[char] = 1
 
-        else:
-            char_count[char] = 1
+        # Find characters that repeat odd number of times
+        odd_chars = ""
+        even_chars = ""
+        odd_chars_count = 0
 
-    # Find characters that repeat odd number of times
-    odd_chars = ""
-    even_chars = ""
-    odd_chars_count = 0
+        for char in char_count:
 
-    for char in char_count:
+            if char_count[char] % 2 != 0:
+                odd_chars_count += 1
+                odd_chars += char
 
-        if char_count[char] % 2 != 0:
-            odd_chars_count += 1
-            odd_chars += char
+            else:
+                half_of_even_char = char_count[char] // 2
+                even_chars += char * half_of_even_char
 
-        else:
-            half_of_even_char = char_count[char] // 2
-            even_chars += char * half_of_even_char
+        # If there are multiple characters that appear only once, then the string
+        # can't be a palindrome so return None
+        if odd_chars_count > 1:
+            return None
 
-    # If there are multiple characters that appear only once, then the string
-    # can't be a palindrome so return None
-    if odd_chars_count > 1:
-        return None
+        # Generate palindrome using start of even_characters + odd_characters
+        # + reverse_of_even_characters
 
-    # Generate palindrome using start of even_characters + odd_characters
-    # + reverse_of_even_characters
-
-    return even_chars + odd_chars + even_chars[::-1]
-
-
-def main():
-
-    print(generate_palindrome("RARARA"))
-
-    print(generate_palindrome("AAAACACBA"))
+        return even_chars + odd_chars + even_chars[::-1]
 
 
-if __name__ == "__main__":
-    main()
+# def main():
+
+#     print(generate_palindrome("RARARA"))
+
+#     print(generate_palindrome("AAAACACBA"))
+
+
+# if __name__ == "__main__":
+#     main()
