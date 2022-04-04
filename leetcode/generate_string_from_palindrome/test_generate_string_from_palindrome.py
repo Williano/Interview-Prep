@@ -6,7 +6,7 @@ class TestGeneratePalindrome(unittest.TestCase):
     def setUp(self) -> None:
         self.test = Solution()
         self.data_1 = "AAAACACBA"
-        self.data_2 = "RARARA"
+        self.data_2 = "RARARARARA"
 
     def test_generate_palindrome(self):
 
